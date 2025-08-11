@@ -7,6 +7,9 @@ import InfoCards from './Components/InfoCards/InfoCards'
 import AboutSchool from './Components/AboutSchool/AboutSchool'
 import AboutPrincipal from './Components/AboutPrincipal/AboutPrincipal'
 import Footer from './Components/Footer/Footer'
+import Testimonials from './Components/Testimonials/Testimonials'
+import FAQ from './Components/FAQ/FAQ'
+import SchoolFeatures from './Components/SchoolFeatures/SchoolFeatures'
 
 const App = () => {
   return (
@@ -16,8 +19,11 @@ const App = () => {
       {/* <SchoolIntro/> */}
       <Infrastructure/>
       <InfoCards/>
+      <SchoolFeatures/>
       <AboutSchool/>
       <AboutPrincipal/>
+      <Testimonials/>
+      <FAQ/>
       <Footer/>
     </div>
   )
