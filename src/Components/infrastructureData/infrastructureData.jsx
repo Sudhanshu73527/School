@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import {
   FaChalkboardTeacher,
@@ -11,197 +11,74 @@ import {
   FaPaintBrush,
   FaBus,
   FaHeartbeat,
-  FaGlobeAmericas,
   FaLeaf,
-  FaTheaterMasks,
 } from "react-icons/fa";
 
 const infrastructureData = [
-  {
-    icon: <FaChalkboardTeacher />,
-    color: "from-red-400 to-red-600",
-    title: "Maths Lab",
-    description:
-      "Equipped with modern tools to make learning mathematics interactive and fun.",
-  },
-  {
-    icon: <FaFlask />,
-    color: "from-yellow-400 to-yellow-600",
-    title: "Science Labs",
-    description:
-      "Spacious Physics, Chemistry & Biology labs for hands-on experiments.",
-  },
-  {
-    icon: <FaDesktop />,
-    color: "from-blue-400 to-blue-600",
-    title: "IT Labs",
-    description:
-      "High-tech computer labs providing cutting-edge digital education.",
-  },
-  {
-    icon: <FaUtensils />,
-    color: "from-orange-400 to-orange-600",
-    title: "Canteen",
-    description:
-      "Hygienic and nutritious meals served fresh for students and staff.",
-  },
-  {
-    icon: <FaBookOpen />,
-    color: "from-green-400 to-green-600",
-    title: "Library",
-    description:
-      "A treasure of books, journals, and digital resources to inspire learning.",
-  },
-  {
-    icon: <FaBasketballBall />,
-    color: "from-purple-400 to-purple-600",
-    title: "Sports Facilities",
-    description:
-      "Playgrounds and courts to encourage physical fitness and teamwork.",
-  },
-  {
-    icon: <FaMusic />,
-    color: "from-pink-400 to-pink-600",
-    title: "Music Room",
-    description:
-      "Instruments and training for classical, folk, and modern music.",
-  },
-  {
-    icon: <FaPaintBrush />,
-    color: "from-indigo-400 to-indigo-600",
-    title: "Art & Craft Studio",
-    description: "A creative space for painting, sculpting, and crafts.",
-  },
-  {
-    icon: <FaBus />,
-    color: "from-teal-400 to-teal-600",
-    title: "Transport",
-    description: "Safe and comfortable buses with GPS tracking.",
-  },
-  {
-    icon: <FaHeartbeat />,
-    color: "from-rose-400 to-rose-600",
-    title: "Medical Room",
-    description: "First-aid facilities with a qualified nurse on campus.",
-  },
-  {
-    icon: <FaGlobeAmericas />,
-    color: "from-emerald-400 to-emerald-600",
-    title: "Language Lab",
-    description:
-      "Enhancing communication skills with interactive language learning tools.",
-  },
-  {
-    icon: <FaLeaf />,
-    color: "from-lime-400 to-lime-600",
-    title: "Eco Garden",
-    description:
-      "A green initiative to connect students with nature and sustainability.",
-  },
-  {
-    icon: <FaTheaterMasks />,
-    color: "from-yellow-500 to-yellow-700",
-    title: "Drama & Theatre",
-    description: "Stage performances to boost confidence and creativity.",
-  },
+  { icon: <FaDesktop />, title: "Computer Labs", description: "Modern computer labs equipped with updated systems to support digital learning." },
+  { icon: <FaFlask />, title: "Science Labs", description: "Well-structured Physics, Chemistry & Biology labs for practical experiments." },
+  { icon: <FaChalkboardTeacher />, title: "Maths Lab", description: "Interactive learning tools to strengthen logical thinking and problem-solving." },
+  { icon: <FaBookOpen />, title: "Library", description: "A peaceful space with books, journals, and study resources for students." },
+  { icon: <FaBasketballBall />, title: "Sports Facilities", description: "Playgrounds and sports areas to encourage fitness and teamwork." },
+  { icon: <FaMusic />, title: "Music Room", description: "Dedicated space for musical training and creative expression." },
+  { icon: <FaPaintBrush />, title: "Art & Craft", description: "Creative studio for drawing, painting, and artistic development." },
+  { icon: <FaUtensils />, title: "Canteen", description: "Clean and hygienic food facilities for students and staff." },
+  { icon: <FaBus />, title: "Transport", description: "Safe and reliable transport services covering nearby areas." },
+  { icon: <FaHeartbeat />, title: "Medical Room", description: "Basic medical care with first-aid and health support on campus." },
+  { icon: <FaLeaf />, title: "Eco Garden", description: "Green environment promoting environmental awareness and care." },
 ];
 
 const Infrastructure = () => {
-  const scrollRef = useRef(null);
-
-  useEffect(() => {
-    const scrollContainer = scrollRef.current;
-    let scrollAmount = 0;
-    let isPaused = false;
-
-    const autoScroll = setInterval(() => {
-      if (!isPaused && scrollContainer) {
-        scrollAmount += 320;
-        if (scrollAmount >= scrollContainer.scrollWidth) {
-          scrollAmount = 0;
-        }
-        scrollContainer.scrollTo({ left: scrollAmount, behavior: "smooth" });
-      }
-    }, 3000);
-
-    scrollContainer.addEventListener("mouseenter", () => (isPaused = true));
-    scrollContainer.addEventListener("mouseleave", () => (isPaused = false));
-
-    return () => clearInterval(autoScroll);
-  }, []);
-
   return (
-    <div className="bg-gradient-to-b from-white to-green-50 py-16 font-playfair">
-      <div className="max-w-7xl mx-auto px-4">
-        {/* Heading */}
-        <h2
-          className="text-4xl sm:text-5xl font-extrabold text-center mb-4 
-                       bg-gradient-to-r from-green-700 via-emerald-500 to-lime-500 
-                       bg-clip-text text-transparent drop-shadow-lg"
-        >
-          Our Infrastructure
-        </h2>
-        <p className="text-center max-w-3xl mx-auto mb-10 text-gray-600 opacity-90">
-          We provide{" "}
-          <span className="text-green-600 font-semibold">
-            world-class facilities
-          </span>
-          to encourage holistic learning, creativity, and all-round development.
-        </p>
+    <section className="bg-[#FAFAFA] py-24 font-playfair">
+      <div className="max-w-7xl mx-auto px-5">
 
-        {/* Scrollable Cards */}
-        <div
-          ref={scrollRef}
-          className="flex overflow-x-auto space-x-6 no-scrollbar pb-4"
-          style={{ scrollBehavior: "smooth" }}
-        >
+        {/* Heading */}
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-[#2E1C14]">
+            Our Infrastructure
+          </h2>
+          <p className="mt-4 max-w-3xl mx-auto text-gray-500 text-lg">
+            Carefully designed facilities that support academic excellence,
+            creativity, and holistic growth.
+          </p>
+        </div>
+
+        {/* Cards */}
+        <div className="flex gap-8 overflow-x-auto pb-6 no-scrollbar">
           {infrastructureData.map((item, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="relative flex-shrink-0 w-80 h-[340px] p-[3px] rounded-2xl 
-                         bg-gradient-to-r from-green-400 via-emerald-500 to-lime-500
-                         group"
+              transition={{ duration: 0.4, delay: index * 0.06 }}
+              className="min-w-[300px] max-w-[300px] bg-white rounded-3xl 
+                         border border-gray-200 px-8 py-10 text-center
+                         shadow-sm hover:shadow-lg hover:-translate-y-1
+                         transition-all duration-300"
             >
-              {/* Rotating border effect */}
-              <div
-                className="absolute inset-0 rounded-2xl border-transparent group-hover:animate-spin-slow 
-                              bg-[conic-gradient(var(--tw-gradient-stops))] from-green-400 via-emerald-500 to-lime-500 p-[2px]"
-              ></div>
-
-              <div
-                className="relative flex flex-col items-center justify-center rounded-2xl shadow-xl p-6 
-                              text-center bg-white/80 backdrop-blur-lg h-full
-                              hover:shadow-2xl transform transition-all duration-300"
-              >
-                <div
-                  className={`mx-auto w-20 h-20 rounded-full flex items-center justify-center 
-                                 bg-gradient-to-br ${item.color} text-white text-4xl shadow-lg mb-4 animate-bounce`}
-                >
-                  {item.icon}
-                </div>
-                <h3 className="text-xl font-bold mb-2 text-green-700">
-                  {item.title}
-                </h3>
-                <p className="text-gray-600 mb-4 text-sm leading-relaxed">
-                  {item.description}
-                </p>
-                <button
-                  className="text-green-600 font-semibold flex items-center justify-center space-x-2 
-                                   hover:underline hover:text-green-800 transition"
-                >
-                  <span>Read More</span>
-                  <span>➜</span>
-                </button>
+              {/* Icon */}
+              <div className="mx-auto w-20 h-20 rounded-full 
+                              bg-gradient-to-br from-[#F6EFE7] to-[#EFE4D8]
+                              flex items-center justify-center text-[#7A5C3E] 
+                              text-3xl mb-6 shadow-sm">
+                {item.icon}
               </div>
+
+              <h3 className="text-xl font-bold text-[#2E1C14] mb-3">
+                {item.title}
+              </h3>
+
+              <p className="text-sm text-gray-600 leading-relaxed">
+                {item.description}
+              </p>
             </motion.div>
           ))}
         </div>
+
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -36,14 +36,10 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
         {/* Logo + School Name */}
         <div className="flex items-center space-x-3 group">
-          <img
-            src={logo}
-            alt="School Logo"
-            className="h-12 md:h-16 w-auto drop-shadow-md transform transition-transform duration-300 group-hover:scale-110"
-          />
+
          <div className="leading-tight" style={{ fontFamily: '"Playfair Display", serif' }}>
   <h1 className="text-blue-700 font-bold text-xl md:text-2xl transition-colors duration-300 group-hover:text-blue-800">
-    Iqra Public School
+    Araybhat International School
   </h1>
   
   <p className="text-xs md:text-sm text-gray-600">

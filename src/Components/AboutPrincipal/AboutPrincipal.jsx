@@ -1,77 +1,74 @@
 import React from "react";
 import { motion } from "framer-motion";
-import principalImg from "../../assets/iqra1.webp"; // Replace with your image path
+import principalImg from "../../assets/aray6.png"; // principal image
 
-const AboutPrincipal = () => {
+const PrincipalMessage = () => {
   return (
-    <section className="relative bg-gradient-to-br from-green-50 via-white to-green-100 py-12 px-4 md:py-20 md:px-16 overflow-hidden">
-      {/* Decorative Glow */}
-      <div className="absolute top-20 left-10 w-52 h-52 md:w-72 md:h-72 bg-green-200 blur-3xl opacity-20 rounded-full"></div>
-      <div className="absolute bottom-10 right-10 w-52 h-52 md:w-72 md:h-72 bg-emerald-300 blur-3xl opacity-20 rounded-full"></div>
+    <section className="bg-[#FAFAFA] py-20 font-playfair">
+      <div className="max-w-7xl mx-auto px-5 grid md:grid-cols-2 gap-14 items-center">
 
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-center relative z-10">
-        
-        {/* Image Section */}
+        {/* IMAGE */}
         <motion.div
-          initial={{ opacity: 0, x: -40 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
           className="flex justify-center"
         >
-          <motion.div
-            animate={{ y: [0, -8, 0] }}
-            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-            className="relative group w-full max-w-sm md:max-w-md"
-          >
+          <div className="relative max-w-md w-full">
             <img
               src={principalImg}
               alt="Principal"
-              className="rounded-2xl shadow-xl transform group-hover:scale-105 transition duration-500 object-cover w-full"
+              className="w-full h-full object-cover rounded-3xl shadow-xl"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent rounded-2xl"></div>
-          </motion.div>
+            {/* Accent border */}
+            <div className="absolute -bottom-4 -right-4 w-full h-full border-2 border-[#D7A86E] rounded-3xl -z-10"></div>
+          </div>
         </motion.div>
 
-        {/* Text Section */}
+        {/* CONTENT */}
         <motion.div
-          initial={{ opacity: 0, x: 40 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-          className="backdrop-blur-md bg-white/70 p-6 md:p-8 rounded-2xl shadow-lg"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="text-[#2E1C14]"
         >
-          <h2 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6 bg-gradient-to-r from-green-700 to-emerald-500 bg-clip-text text-transparent">
-            About Our Principal
+          <h2 className="text-3xl md:text-4xl font-extrabold mb-6">
+            Principal’s Message
           </h2>
 
-          <p className="text-gray-600 leading-relaxed mb-5 text-sm md:text-base">
-            Our principal is the guiding light of our institution — a visionary
-            leader committed to shaping the future with compassion, dedication,
-            and excellence. With a strong belief that{" "}
-            <span className="text-green-600 font-semibold">
-              education is the most powerful tool for change
-            </span>
-            , they inspire both students and teachers to achieve their full
-            potential.
+          <p className="text-lg text-gray-600 leading-relaxed mb-6">
+            At <span className="font-semibold text-[#5D4037]">Aryabhat Public School</span>, 
+            we believe that education is not merely about academic achievement, 
+            but about shaping character, nurturing curiosity, and building confident individuals.
           </p>
 
-          <ul className="space-y-3 text-gray-700 text-sm md:text-base">
-            <li className="flex items-start">
-              <span className="text-green-600 font-bold mr-2">✔</span>
-              Leading with empathy and integrity
-            </li>
-            <li className="flex items-start">
-              <span className="text-green-600 font-bold mr-2">✔</span>
-              Inspiring innovation in learning
-            </li>
-            <li className="flex items-start">
-              <span className="text-green-600 font-bold mr-2">✔</span>
-              Building a culture of respect and excellence
-            </li>
-          </ul>
+          <p className="text-lg text-gray-600 leading-relaxed mb-6">
+            Our aim is to provide a learning environment where students are encouraged 
+            to explore their potential, develop strong values, and grow into responsible 
+            citizens prepared to face the challenges of the future.
+          </p>
+
+          <p className="text-lg text-gray-600 leading-relaxed mb-8">
+            Together with dedicated teachers and supportive parents, we strive to 
+            create a school culture that inspires excellence, discipline, and lifelong learning.
+          </p>
+
+          {/* SIGNATURE */}
+          <div className="mt-6">
+            <p className="font-bold text-[#2E1C14] text-lg">
+               Principal
+            </p>
+            <p className="text-sm text-gray-500">
+              S.K Pathak
+            </p>
+          </div>
         </motion.div>
+
       </div>
     </section>
   );
 };
 
-export default AboutPrincipal;
+export default PrincipalMessage;

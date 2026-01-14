@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import bgImg from "../../assets/iqra1.webp";
-import bgImg2 from "../../assets/iqra2.webp";
-import bgImg3 from "../../assets/iqra3.webp";
+import bgImg from "../../assets/aray3.webp";
+import bgImg2 from "../../assets/aray2.webp";
+import bgImg3 from "../../assets/aray6.png";
 
 const images = [bgImg, bgImg2, bgImg3];
 const prompts = [
-  <> Unlock the power of <span className="text-orange-500 font-semibold">knowledge</span> – your future begins here. </>,
-  <> Launch your dreams with quality <span className="text-orange-500 font-semibold">education</span>. </>,
-  <> <span className="text-orange-500 font-semibold">Education</span> is the passport to tomorrow – prepare today. </>,
-  <> Learning today, <span className="text-orange-500 font-semibold">leading</span> tomorrow. </>,
+  <> Unlock the <span className="text-blue-700 font-extrabold ">power of knowledge</span> – your future begins here. </>,
+  <> Launch your dreams <span className="text-blue-700 font-semibold">with quality education</span>. </>,
+  <> <span className="text-blue-700 font-semibold">Education is the passport</span> to tomorrow – prepare today. </>,
+  <> Learning today, <span className="text-blue-700 font-semibold">leading tomorrow. </span></>,
 ];
 
 const Hero = () => {
@@ -55,7 +55,7 @@ const Hero = () => {
 
       <a
         href="#"
-        className="inline-block bg-green-600 text-white text-sm sm:text-base px-5 py-2 sm:px-6 sm:py-2.5 rounded-md hover:bg-green-700 transition"
+        className="inline-block bg-blue-600 text-white text-sm sm:text-base px-5 py-2 sm:px-6 sm:py-2.5 rounded-md hover:bg-green-700 transition"
         style={{ fontFamily: '"Playfair Display", serif' }}
       >
         Enquire Now

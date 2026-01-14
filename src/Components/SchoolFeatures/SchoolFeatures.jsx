@@ -1,64 +1,84 @@
 import React from "react";
-import { FaBell, FaClipboardList, FaChalkboardTeacher, FaBookOpen, FaClipboard, FaFlag } from "react-icons/fa";
+import { FaLightbulb, FaHandshake, FaStar } from "react-icons/fa";
 
-const features = [
-  {
-    icon: <FaBell className="text-3xl text-gray-600" />,
-    title: "Admission Open",
-    description:
-      "Admission Open for 2025-2026 session at Top School in Bihar, Patna.",
-  },
-  {
-    icon: <FaClipboardList className="text-3xl text-gray-600" />,
-    title: "Notice Board",
-    description:
-      "Stay updated with all the activities and events at School. Updated regularly.",
-  },
-  {
-    icon: <FaChalkboardTeacher className="text-3xl text-gray-600" />,
-    title: "Daily Class Updates",
-    description:
-      "Detailed daily updates, outlining each class for every Subject as well as the homework assigned.",
-  },
-  {
-    icon: <FaBookOpen className="text-3xl text-gray-600" />,
-    title: "Diverse Curricula",
-    description:
-      "Ensures better Comprehension of the Subject Matter by the students.",
-  },
-  {
-    icon: <FaClipboard className="text-3xl text-gray-600" />,
-    title: "Co Curricular Activities",
-    description:
-      "Wide range of Activities for Holistic Development.",
-  },
-  {
-    icon: <FaFlag className="text-3xl text-gray-600" />,
-    title: "Boarding School",
-    description:
-      "TGS Patna offers boarding for boys (Grades III-XII) and girls (Grades VIII-XII) with a hostel inside campus.",
-  },
-];
-
-const SchoolFeatures = () => {
+const AimSection = () => {
   return (
-    <section className="bg-white py-12 px-4 md:px-12">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        {features.map((feature, index) => (
-          <div
-            key={index}
-            className="border border-gray-200 rounded-md p-6 flex flex-col justify-start items-start h-48 w-full hover:shadow-md transition-shadow"
-          >
-            <div className="mb-3">{feature.icon}</div>
-            <h3 className="text-lg font-semibold text-gray-800 mb-2">
-              {feature.title}
+    <section className="bg-[#FAF9F7] py-24 font-playfair">
+      <div className="max-w-7xl mx-auto px-5">
+
+        {/* Heading */}
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-[#2E1C14] tracking-wide">
+            WE AIM : TO PREPARE THE STUDENT
+          </h2>
+          <p className="max-w-3xl mx-auto mt-4 text-gray-500 text-lg leading-relaxed">
+            To be intellectually competent to promote the development of
+            intellectual skills and mastery of academic requirements.
+          </p>
+          <div className="w-16 h-[2px] bg-[#C9A46A] mx-auto mt-6" />
+        </div>
+
+        {/* Cards */}
+        <div className="grid md:grid-cols-3 gap-8">
+
+          {/* WE BELIEVE */}
+          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#DFF5F1] to-[#BFEAE1] p-10 shadow-lg hover:shadow-2xl transition">
+            <FaLightbulb className=" animate-bounce absolute bottom-6 right-6 text-8xl text-[#1E7F74]/20" />
+
+            <h3 className="text-2xl font-extrabold text-[#1E7F74] mb-4">
+              WE BELIEVE
             </h3>
-            <p className="text-gray-500 text-sm">{feature.description}</p>
+            <p className="text-[#355F5B] text-lg leading-relaxed font-semibold">
+              In a holistic approach to education that fosters intellectual
+              curiosity, emotional resilience, and respect for all individuals,
+              enabling students to become thoughtful and responsible citizens.
+            </p>
+
+            <button className="mt-8 border border-[#1E7F74] px-6 py-2 rounded-full text-[#1E7F74] font-bold hover:bg-[#1E7F74] hover:text-white transition">
+              ++
+            </button>
           </div>
-        ))}
+
+          {/* WE PLEDGE */}
+          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#ECEFF6] to-[#D6DEEE] p-10 shadow-lg hover:shadow-2xl transition">
+            <FaHandshake className=" animate-bounce absolute bottom-6 right-6 text-8xl text-[#2C3E5C]/20" />
+
+            <h3 className="text-2xl font-extrabold text-[#2C3E5C] mb-4">
+              WE PLEDGE
+            </h3>
+            <p className="text-[#3E4B66] text-lg leading-relaxed font-semibold">
+              To nurture students’ self-worth, dignity, and a strong sense of
+              fairness. We encourage respect for diversity and empathy for all,
+              creating a safe, inclusive, and supportive environment.
+            </p>
+
+            <button className="mt-8 border border-[#2C3E5C] px-6 py-2 rounded-full text-[#2C3E5C] font-bold hover:bg-[#2C3E5C] hover:text-white transition">
+              ++
+            </button>
+          </div>
+
+          {/* WE WANT */}
+          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#FFE6E6] to-[#FBCACA] p-10 shadow-lg hover:shadow-2xl transition ">
+            <FaStar className=" animate-bounce absolute bottom-6 right-6 text-8xl text-[#B33636]/20" />
+
+            <h3 className="text-2xl font-extrabold text-[#B33636] mb-4">
+              WE WANT
+            </h3>
+            <p className="text-[#6B2A2A] text-lg leading-relaxed font-semibold">
+              Our students to be confident, innovative, and kind. We aim to
+              instill leadership qualities, social responsibility, and a
+              lifelong love for learning.
+            </p>
+
+            <button className="mt-8 border border-[#B33636] px-6 py-2 rounded-full text-[#B33636] font-bold hover:bg-[#B33636] hover:text-white transition">
+              ++
+            </button>
+          </div>
+
+        </div>
       </div>
     </section>
   );
 };
 
-export default SchoolFeatures;
+export default AimSection;
