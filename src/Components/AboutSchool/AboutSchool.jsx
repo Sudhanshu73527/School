@@ -1,80 +1,143 @@
 import React from "react";
 import { motion } from "framer-motion";
-import schoolImg from "../../assets/aray3.webp";
+import chairmanImg from "../../assets/rc1.jpeg";
 
-const AboutSchool = () => {
+const Chairman = () => {
   return (
-    <section className="relative bg-gradient-to-b from-gray-50 via-green-50 to-white py-14 md:py-20 px-4 sm:px-6 lg:px-20 overflow-hidden">
-      
-      {/* Soft Background Glow */}
-      <div className="absolute -top-24 -left-24 w-80 h-80 bg-green-300 blur-[120px] opacity-20 rounded-full"></div>
-      <div className="absolute bottom-0 right-0 w-80 h-80 bg-emerald-400 blur-[120px] opacity-20 rounded-full"></div>
+    <section className="relative w-full bg-[#0b1220] py-32 px-4 overflow-hidden">
 
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14 items-center relative z-10">
+      {/* Ambient Light */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_10%_15%,rgba(245,158,11,0.08),transparent_40%),radial-gradient(circle_at_90%_85%,rgba(16,185,129,0.08),transparent_45%)]" />
 
-        {/* IMAGE SECTION */}
+      <div className="relative max-w-7xl mx-auto">
+
+        {/* MAIN GRID */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
+          transition={{ duration: 1.1 }}
+          className="grid grid-cols-1 lg:grid-cols-12 gap-20 items-center"
         >
-          <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-white/40">
-            <img
-              src={schoolImg}
-              alt="Aryabhat Public School"
-              className="w-full h-full object-cover hover:scale-105 transition duration-700"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
-          </div>
+
+          {/* IMAGE SIDE */}
+          <motion.div
+            initial={{ x: -80, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            className="lg:col-span-5 flex justify-center lg:justify-start"
+          >
+            <div className="relative">
+
+              {/* Gold frame */}
+              <div className="absolute -bottom-6 -right-6 w-full h-full border border-amber-400/40"></div>
+
+              <img
+                src={chairmanImg}
+                alt="Chairman"
+                className="relative w-[300px] sm:w-[380px] xl:w-[440px] object-cover grayscale hover:grayscale-0 transition duration-700"
+              />
+
+              {/* Tag */}
+              <div className="absolute -top-6 left-0 bg-amber-400 text-[#0b1220] text-xs tracking-widest px-5 py-2 uppercase font-semibold">
+                Chairman
+              </div>
+            </div>
+          </motion.div>
+
+          {/* CONTENT SIDE */}
+          <motion.div
+            initial={{ x: 80, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            className="lg:col-span-7 text-white"
+          >
+            <span className="block text-[11px] tracking-[0.45em] uppercase text-amber-400 mb-8">
+              Message from the Director
+            </span>
+
+            <h2 className="text-4xl sm:text-5xl xl:text-[56px] font-medium leading-[1.15] mb-10">
+              Vision Today. <br />
+              Legacy Tomorrow.
+            </h2>
+
+            <div className="w-28 h-[1.5px] bg-amber-400 mb-10 opacity-80" />
+
+            <p className="text-gray-300 text-base sm:text-lg leading-relaxed mb-7 max-w-2xl">
+              Education is the most powerful investment we can make for the
+              future. As Chairman, my vision has always been to build an
+              institution that stands for integrity, excellence, and
+              progressive thinking.
+            </p>
+
+            <p className="text-gray-300 text-base sm:text-lg leading-relaxed mb-7 max-w-2xl">
+              Our school is founded on the belief that students must be prepared
+              not only for academic success, but also for leadership,
+              responsibility, and meaningful contribution to society.
+            </p>
+
+            <p className="text-gray-300 text-base sm:text-lg leading-relaxed mb-12 max-w-2xl">
+              With strong values, dedicated educators, and a clear vision, we
+              continue to shape generations who will define the future with
+              confidence and character.
+            </p>
+
+            {/* SIGNATURE + CTA */}
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-12">
+
+              <motion.button
+                whileHover={{ y: -2 }}
+                whileTap={{ scale: 0.96 }}
+                className="relative px-10 py-3 text-xs font-semibold tracking-[0.18em] uppercase text-[#0b1220] bg-amber-400 overflow-hidden group"
+              >
+                <span className="relative z-10">Read Full Vision</span>
+                <span className="absolute inset-0 bg-amber-300 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></span>
+              </motion.button>
+
+              <div className="border-l border-amber-400/40 pl-6">
+                <p className="text-lg font-semibold text-white">
+                  Mr. Shaheb Yadav
+                </p>
+                <p className="text-xs uppercase tracking-widest text-gray-400">
+                  Director
+                </p>
+              </div>
+
+            </div>
+          </motion.div>
+
         </motion.div>
 
-        {/* TEXT SECTION */}
+        {/* LEGACY STRIP */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.1 }}
           viewport={{ once: true }}
-          className="bg-white/75 backdrop-blur-xl rounded-3xl shadow-xl p-6 sm:p-8 md:p-10"
+          transition={{ duration: 1, delay: 0.2 }}
+          className="mt-28 grid grid-cols-2 sm:grid-cols-4 gap-10 border-t border-white/10 pt-14"
         >
-          <p className="uppercase tracking-widest text-green-700 font-semibold mb-3">
-            About Aryabhat Public School
-          </p>
-
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 mb-8 leading-tight">
-            Nurturing Excellence Through Education & Values
-          </h2>
-
-          {/* CONTENT BLOCKS */}
-          <div className="space-y-6 text-gray-600 text-base sm:text-lg leading-relaxed">
-
-            <div>
-              <h4 className="font-semibold text-green-800 mb-2">
-                Who We Are
-              </h4>
-              <p>
-                Aryabhat Public School is a progressive educational institution
-                committed to academic excellence, character development, and
-                holistic growth of every student.
+          {[
+            { value: "20+", label: "Years of Leadership" },
+            { value: "5000+", label: "Students Guided" },
+            { value: "150+", label: "Educators" },
+            { value: "100%", label: "Commitment" },
+          ].map((item, i) => (
+            <div key={i} className="text-center">
+              <p className="text-3xl font-semibold text-amber-400">
+                {item.value}
+              </p>
+              <p className="text-xs tracking-widest uppercase text-gray-400 mt-2">
+                {item.label}
               </p>
             </div>
-
-            <div>
-              <h4 className="font-semibold text-green-800 mb-2">
-                Our Educational Philosophy
-              </h4>
-              <p>
-                We believe education should inspire curiosity, critical thinking,
-                and strong moral values while fostering a lifelong love for learning.
-              </p>
-            </div>
-
-
-          </div>
+          ))}
         </motion.div>
+
       </div>
     </section>
   );
 };
 
-export default AboutSchool;
+export default Chairman;

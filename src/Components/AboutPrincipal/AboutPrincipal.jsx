@@ -1,74 +1,116 @@
 import React from "react";
 import { motion } from "framer-motion";
-import principalImg from "../../assets/aray6.png"; // principal image
+import principalImg from "../../assets/rc1.jpeg";
 
-const PrincipalMessage = () => {
+const Principal = () => {
   return (
-    <section className="bg-[#FAFAFA] py-20 font-playfair">
-      <div className="max-w-7xl mx-auto px-5 grid md:grid-cols-2 gap-14 items-center">
+    <section className="relative w-full bg-[#0b1220] py-32 px-4 overflow-hidden">
+      
+      {/* Ambient background */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(16,185,129,0.10),transparent_45%),radial-gradient(circle_at_85%_85%,rgba(34,197,94,0.08),transparent_50%)]" />
 
-        {/* IMAGE */}
+      <div className="relative max-w-7xl mx-auto">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="flex justify-center"
+          transition={{ duration: 1.1 }}
+          className="grid grid-cols-1 lg:grid-cols-12 gap-20 items-center"
         >
-          <div className="relative max-w-md w-full">
-            <img
-              src={principalImg}
-              alt="Principal"
-              className="w-full h-full object-cover rounded-3xl shadow-xl"
-            />
-            {/* Accent border */}
-            <div className="absolute -bottom-4 -right-4 w-full h-full border-2 border-[#D7A86E] rounded-3xl -z-10"></div>
-          </div>
-        </motion.div>
+          
+          {/* CONTENT */}
+          <motion.div
+            initial={{ x: -90, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            className="lg:col-span-7 text-white"
+          >
+            <span className="inline-block text-[11px] tracking-[0.45em] uppercase text-emerald-400 mb-8">
+              Principal’s Message
+            </span>
 
-        {/* CONTENT */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-[#2E1C14]"
-        >
-          <h2 className="text-3xl md:text-4xl font-extrabold mb-6">
-            Principal’s Message
-          </h2>
+            <h2 className="text-4xl sm:text-5xl xl:text-[56px] font-medium leading-[1.15] mb-10">
+              Educating Minds. <br />
+              Shaping Character. <br />
+              Building the Future.
+            </h2>
 
-          <p className="text-lg text-gray-600 leading-relaxed mb-6">
-            At <span className="font-semibold text-[#5D4037]">Aryabhat Public School</span>, 
-            we believe that education is not merely about academic achievement, 
-            but about shaping character, nurturing curiosity, and building confident individuals.
-          </p>
+            <div className="w-28 h-[1.5px] bg-emerald-400 mb-10 opacity-80" />
 
-          <p className="text-lg text-gray-600 leading-relaxed mb-6">
-            Our aim is to provide a learning environment where students are encouraged 
-            to explore their potential, develop strong values, and grow into responsible 
-            citizens prepared to face the challenges of the future.
-          </p>
-
-          <p className="text-lg text-gray-600 leading-relaxed mb-8">
-            Together with dedicated teachers and supportive parents, we strive to 
-            create a school culture that inspires excellence, discipline, and lifelong learning.
-          </p>
-
-          {/* SIGNATURE */}
-          <div className="mt-6">
-            <p className="font-bold text-[#2E1C14] text-lg">
-               Principal
+            <p className="text-gray-300 text-base sm:text-lg leading-relaxed mb-7 max-w-2xl">
+              True education is a journey that transforms learners into leaders.
+              At our institution, we go beyond academics to cultivate discipline,
+              integrity, confidence, and purpose in every student.
             </p>
-            <p className="text-sm text-gray-500">
-              S.K Pathak
-            </p>
-          </div>
-        </motion.div>
 
+            <p className="text-gray-300 text-base sm:text-lg leading-relaxed mb-7 max-w-2xl">
+              Our academic framework blends time-tested values with modern
+              pedagogy, ensuring that students develop critical thinking,
+              adaptability, and a lifelong love for learning.
+            </p>
+
+            <p className="text-gray-300 text-base sm:text-lg leading-relaxed mb-12 max-w-2xl">
+              With committed educators and supportive parents, we create an
+              environment where excellence is nurtured, effort is respected,
+              and success is achieved with humility.
+            </p>
+
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-10">
+              <motion.button
+                whileHover={{ y: -2 }}
+                whileTap={{ scale: 0.96 }}
+                className="relative px-10 py-3 text-xs font-semibold tracking-[0.18em] uppercase text-[#0b1220] bg-emerald-400 overflow-hidden group"
+              >
+                <span className="relative z-10">Read Full Vision</span>
+                <span className="absolute inset-0 bg-emerald-300 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></span>
+              </motion.button>
+
+              <div className="border-l border-emerald-400/40 pl-6">
+                <p className="text-lg font-semibold text-white">
+                  Mr.Vikash Kumar Yadav
+                </p>
+                <p className="text-xs uppercase tracking-widest text-gray-400">
+                  Principal
+                </p>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* IMAGE */}
+          <motion.div
+            initial={{ x: 90, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            className="lg:col-span-5 flex justify-center lg:justify-end"
+          >
+            <div className="relative">
+              
+              {/* Offset frame */}
+              <div className="absolute -top-8 -left-8 w-full h-full border border-emerald-400/40"></div>
+
+              {/* Image */}
+              <img
+                src={principalImg}
+                alt="Principal"
+                className="relative w-[300px] sm:w-[380px] xl:w-[440px] object-cover grayscale hover:grayscale-0 transition duration-700"
+              />
+
+              {/* Glass reflection */}
+              <div className="absolute inset-0 bg-gradient-to-tr from-white/10 via-transparent to-transparent opacity-0 hover:opacity-100 transition duration-700"></div>
+
+              {/* Caption */}
+              <div className="absolute -bottom-12 left-0 text-xs tracking-[0.3em] uppercase text-gray-400">
+                Leadership Rooted in Values
+              </div>
+            </div>
+          </motion.div>
+
+        </motion.div>
       </div>
     </section>
   );
 };
 
-export default PrincipalMessage;
+export default Principal;

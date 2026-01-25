@@ -10,18 +10,28 @@ import Footer from './Components/Footer/Footer'
 import Testimonials from './Components/Testimonials/Testimonials'
 import FAQ from './Components/FAQ/FAQ'
 import SchoolFeatures from './Components/SchoolFeatures/SchoolFeatures'
+import WhatWeProvide from './Components/Whatweprovide/Whatweprovide'
+import UpcomingEvents from './Components/Upcomeingevents/Upcomeingevents'
+import SchoolSections from './Components/schoolsections/schoolsection'
+import OurFacilities from './Components/Ourfacilities/Ourfacilities'
+import OurSchoolGlimpses from './Components/OurSchoolGlimpses/OurSchoolGlimpses'
 
 const App = () => {
   return (
     <div>
-      <Navbar/><br /> <br />
+      <Navbar/>
       <Hero/>
       {/* <SchoolIntro/> */}
       <InfoCards/>
-      <SchoolFeatures/>
-       <Infrastructure/>
       <AboutSchool/>
       <AboutPrincipal/>
+      <WhatWeProvide/>
+      <SchoolFeatures/>
+      <UpcomingEvents/>
+      <SchoolSections/>
+      <OurFacilities/>
+      <OurSchoolGlimpses/>
+      <Infrastructure/>
       <Testimonials/>
       <FAQ/>
       <Footer/>

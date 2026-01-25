@@ -10,7 +10,7 @@ import { MdSchool, MdScience } from "react-icons/md";
 
 const cardData = [
   {
-    title: "Academic Calendar 2025-26",
+    title: "Academic Calendar 2026-27",
     icon: <FaCalendarAlt className="text-3xl" />,
     gradient: "from-blue-500 via-indigo-500 to-purple-600",
     textColor: "text-blue-500",
@@ -33,14 +33,14 @@ const cardData = [
         iconBg: "bg-yellow-400",
         icon: <MdSchool className="text-xl" />,
         title: "Annual Day Celebration",
-        date: "20th December 2025",
+        date: "20th March 2026",
         desc: "Our grand annual day function with cultural programs...",
       },
       {
         iconBg: "bg-cyan-500",
         icon: <MdScience className="text-xl" />,
         title: "Science Exhibition",
-        date: "5th January 2026",
+        date: "30th January 2026",
         desc: "Students showcase innovative projects and experiments...",
       },
     ],

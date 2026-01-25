@@ -8,7 +8,7 @@ const AimSection = () => {
 
         {/* Heading */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-[#2E1C14] tracking-wide">
+          <h2 className="text-3xl md:text-5xl font-extrabold text-[#2E1C14] tracking-wide">
             WE AIM : TO PREPARE THE STUDENT
           </h2>
           <p className="max-w-3xl mx-auto mt-4 text-gray-500 text-lg leading-relaxed">

@@ -52,7 +52,7 @@ const Testimonials = () => {
   return (
     <section className="bg-gray-50 py-12">
       <div className="max-w-6xl mx-auto px-4 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-700 mb-8">
+        <h2 className="text-3xl md:text-5xl font-bold text-[#2E1C14] mb-8">
           What Our Students & Parents Say
         </h2>
 

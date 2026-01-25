@@ -35,7 +35,7 @@ const Infrastructure = () => {
 
         {/* Heading */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-[#2E1C14]">
+          <h2 className="text-3xl md:text-5xl font-extrabold text-[#2E1C14]">
             Our Infrastructure
           </h2>
           <p className="mt-4 max-w-3xl mx-auto text-gray-500 text-lg">

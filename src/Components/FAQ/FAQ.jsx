@@ -49,10 +49,10 @@ const FAQ = () => {
 
         {/* Heading */}
         <div className="text-center mb-12">
-          <p className="uppercase tracking-widest text-green-700 font-semibold mb-2">
+          <p className="uppercase tracking-widest text-[#2E1C14]s font-semibold mb-2">
             FAQs
           </p>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#2E1C14] mb-4">
             Frequently Asked Questions
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
