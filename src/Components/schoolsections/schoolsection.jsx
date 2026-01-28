@@ -69,13 +69,13 @@ const SchoolSections = () => {
 
         {/* Heading */}
         <div className="text-center max-w-3xl mx-auto mb-16 md:mb-24">
-          <h2 className="text-3xl md:text-7xl font-semibold text-[#2E1C14] mb-4">
-            Our School Sections
+          <h2 className="text-3xl md:text-7xl font-semibold text-black mb-4">
+            Our <span className="text-yellow-400">School Sections</span>
           </h2>
           <p className="text-gray-600 text-base md:text-lg">
             Academic stages designed to nurture confidence, curiosity, and success.
           </p>
-          <div className="w-20 h-[3px] bg-gradient-to-r from-blue-500 to-indigo-500 mx-auto mt-5 rounded-full" />
+          <div className="w-20 h-[3px] bg-gradient-to-r from-yellow-400 to-yellow-600 mx-auto mt-5 rounded-full" />
         </div>
 
         {/* Tabs (Mobile scrollable) */}

@@ -60,8 +60,8 @@ const OurFacilities = () => {
       <div className="text-center mb-20 max-w-3xl mx-auto">
         <div className="flex items-center justify-center gap-4 mb-4">
           <span className="w-12 h-[2px] bg-sky-400"></span>
-          <h2 className="text-3xl md:text-4xl font-bold text-[#2E1C14]">
-            Our Facilities
+          <h2 className="text-3xl md:text-5xl font-bold text-black">
+            Our <span className="text-yellow-400">Facilities</span>
           </h2>
           <span className="w-12 h-[2px] bg-sky-400"></span>
         </div>

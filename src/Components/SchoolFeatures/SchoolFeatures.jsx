@@ -8,14 +8,14 @@ const AimSection = () => {
 
         {/* Heading */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-extrabold text-[#2E1C14] tracking-wide">
-            WE AIM : TO PREPARE THE STUDENT
+          <h2 className="text-3xl md:text-5xl font-extrabold text-black tracking-wide">
+            WE AIM : TO <span className="text-yellow-400">PREPARE THE STUDENT</span>
           </h2>
           <p className="max-w-3xl mx-auto mt-4 text-gray-500 text-lg leading-relaxed">
             To be intellectually competent to promote the development of
             intellectual skills and mastery of academic requirements.
           </p>
-          <div className="w-16 h-[2px] bg-[#C9A46A] mx-auto mt-6" />
+          <div className="w-16 h-[2px] bg-yellow-400 mx-auto mt-6" />
         </div>
 
         {/* Cards */}

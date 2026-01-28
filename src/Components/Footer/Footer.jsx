@@ -16,7 +16,7 @@ const Footer = () => {
     <footer className="bg-gradient-to-b from-[#F3F8F5] via-[#ECF3EF] to-[#E3EEE8] text-gray-700">
 
       {/* Top Strip */}
-      <div className="bg-green-700 text-white text-sm py-2 text-center">
+      <div className="bg-yellow-600 text-white text-sm py-2 text-center">
         Admissions Open • Quality Education • Holistic Development
       </div>
 

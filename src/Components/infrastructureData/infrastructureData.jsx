@@ -35,8 +35,8 @@ const Infrastructure = () => {
 
         {/* Heading */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-extrabold text-[#2E1C14]">
-            Our Infrastructure
+          <h2 className="text-3xl md:text-5xl font-extrabold text-black">
+            Our <span className="text-yellow-400">Infrastructure</span>
           </h2>
           <p className="mt-4 max-w-3xl mx-auto text-gray-500 text-lg">
             Carefully designed facilities that support academic excellence,
@@ -60,13 +60,13 @@ const Infrastructure = () => {
             >
               {/* Icon */}
               <div className="mx-auto w-20 h-20 rounded-full 
-                              bg-gradient-to-br from-[#F6EFE7] to-[#EFE4D8]
+                              bg-gradient-to-br from-yellow-400 to-yellow-600
                               flex items-center justify-center text-[#7A5C3E] 
                               text-3xl mb-6 shadow-sm">
                 {item.icon}
               </div>
 
-              <h3 className="text-xl font-bold text-[#2E1C14] mb-3">
+              <h3 className="text-xl font-bold text-yellow-400 mb-3">
                 {item.title}
               </h3>
 

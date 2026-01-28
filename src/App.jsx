@@ -15,16 +15,20 @@ import UpcomingEvents from './Components/Upcomeingevents/Upcomeingevents'
 import SchoolSections from './Components/schoolsections/schoolsection'
 import OurFacilities from './Components/Ourfacilities/Ourfacilities'
 import OurSchoolGlimpses from './Components/OurSchoolGlimpses/OurSchoolGlimpses'
+import RCISSection from './Components/RCISSection/RCISSection'
+import SchoolHighlight from './Components/SchoolHighlight/SchoolHighlight'
 
 const App = () => {
   return (
     <div>
       <Navbar/>
       <Hero/>
+      <SchoolHighlight/>
       {/* <SchoolIntro/> */}
       <InfoCards/>
-      <AboutSchool/>
+      <RCISSection/>
       <AboutPrincipal/>
+      <AboutSchool/>
       <WhatWeProvide/>
       <SchoolFeatures/>
       <UpcomingEvents/>
