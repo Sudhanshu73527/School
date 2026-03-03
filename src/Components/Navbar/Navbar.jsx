@@ -7,7 +7,7 @@ import {
   FaTimes,
 } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
-import logo from "../../assets/logo1.jfif";
+import logo from "../../assets/modern.png";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -50,11 +50,11 @@ const Navbar = () => {
           <div className="flex items-center space-x-6">
             <span className="flex items-center space-x-2">
               <FaPhoneAlt className="text-yellow-400" />
-              <span>+91-70703 23285</span>
+              <span>+91-9939995043</span>
             </span>
             <span className="flex items-center space-x-2">
               <FaEnvelope className="text-yellow-400" />
-              <span>RCInternationalSchool@.in</span>
+              <span>Modernpublicschool@.in</span>
             </span>
           </div>
 
@@ -78,16 +78,16 @@ const Navbar = () => {
           <div className="flex items-center gap-2 md:gap-3 min-w-0">
             <img src={logo} alt="logo" className="h-14 md:h-20 w-auto" />
             <h1 className="text-sm font-bold text-green-800 uppercase md:hidden truncate">
-              RC International School
+              Modern Public School 
             </h1>
           </div>
 
           <div className="text-center flex-1 hidden md:block">
             <h1 className="text-3xl font-extrabold text-green-800 uppercase">
-              RC International School
+              Modern Public School
             </h1>
             <h2 className="text-xl font-bold text-purple-800">
-             Chautarwa, Bihar 845101
+             Ramnagar, Bihar 845101
             </h2>
             <p className="text-yellow-500 font-bold">
               School No.: 12345, Affiliation Code - 000000
@@ -96,10 +96,10 @@ const Navbar = () => {
 
           <div className="hidden lg:flex flex-col space-y-1 text-green-900">
             <span className="flex items-center gap-2">
-              <FaPhoneAlt className="text-yellow-500" /> +91-70703 23285
+              <FaPhoneAlt className="text-yellow-500" /> +91-9939995043
             </span>
             <span className="flex items-center gap-2">
-              <FaEnvelope className="text-yellow-500" /> RCInternationalSchool@.in
+              <FaEnvelope className="text-yellow-500" /> Modernpublicschool@.in
             </span>
           </div>
 
@@ -166,7 +166,7 @@ const Navbar = () => {
               <div className="flex items-center gap-2 px-4 py-4 border-b">
                 <img src={logo} alt="logo" className="h-11 w-auto" />
                 <h2 className="font-semibold text-green-800 text-sm flex-1 truncate">
-                  Araybhat National Public School
+                  Modern Public School 
                 </h2>
                 <button onClick={() => setMenuOpen(false)}>
                   <FaTimes className="text-xl text-green-800" />

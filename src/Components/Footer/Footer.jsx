@@ -26,13 +26,13 @@ const Footer = () => {
         {/* School Info */}
         <div>
           <div className="flex items-center gap-3 mb-4">
-            <FaSchool className="text-green-700 text-2xl" />
+            {/* <FaSchool className="text-green-700 text-2xl" /> */}
             <h3 className="text-2xl font-bold text-green-800">
-              RC International School
+             Modern Public School 
             </h3>
           </div>
           <p className="text-sm leading-relaxed text-gray-600 mb-4">
-            RC International School is dedicated to nurturing young minds through
+            Modern Public School is dedicated to nurturing young minds through
             academic excellence, moral values, discipline, and modern education.
             We prepare students to excel confidently in a global environment.
           </p>
@@ -83,7 +83,7 @@ const Footer = () => {
             </li>
             <li className="flex items-center gap-3">
               <FaEnvelope className="text-green-700" />
-              <span>info@rcinternationalschool.com</span>
+              <span>info@modernpublicschool.com</span>
             </li>
             <li className="flex items-center gap-3">
               <FaClock className="text-green-700" />
@@ -124,7 +124,7 @@ const Footer = () => {
       <div className="border-t border-green-200 py-5 text-center text-sm text-gray-600">
         © {new Date().getFullYear()}{" "}
         <span className="font-semibold text-green-800">
-          RC International School
+          Modern Public School 
         </span>
         . All Rights Reserved.
       </div>

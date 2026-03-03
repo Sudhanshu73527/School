@@ -1,79 +1,92 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { FaLightbulb, FaHandshake, FaStar } from "react-icons/fa";
+
+const aimData = [
+  {
+    icon: <FaLightbulb />,
+    title: "Our Vision",
+    description:
+      "As a new-generation school, we aim to introduce modern teaching methodologies that combine smart classrooms, digital tools and activity-based learning to make education engaging and future-ready.",
+  },
+  {
+    icon: <FaHandshake />,
+    title: "Our Commitment",
+    description:
+      "We are committed to building a safe, disciplined and inclusive environment where every child feels valued, respected and motivated to grow academically and personally.",
+  },
+  {
+    icon: <FaStar />,
+    title: "Our Goal",
+    description:
+      "Our goal is to develop confident, creative and responsible learners who are equipped with leadership qualities, strong character and a lifelong passion for learning.",
+  },
+];
 
 const AimSection = () => {
   return (
-    <section className="bg-[#FAF9F7] py-24 font-playfair">
-      <div className="max-w-7xl mx-auto px-5">
+    <section className="relative py-24 sm:py-32 px-4 bg-gradient-to-b from-white to-slate-50">
 
-        {/* Heading */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-extrabold text-black tracking-wide">
-            WE AIM : TO <span className="text-yellow-400">PREPARE THE STUDENT</span>
+      <div className="max-w-7xl mx-auto">
+
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1 }}
+          className="text-center max-w-3xl mx-auto mb-20"
+        >
+          <span className="text-xs tracking-[0.4em] uppercase text-yellow-500">
+            Our Philosophy
+          </span>
+
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-gray-900 mt-4 mb-6">
+            Preparing Students for a <span className="text-yellow-500">Bright Future</span>
           </h2>
-          <p className="max-w-3xl mx-auto mt-4 text-gray-500 text-lg leading-relaxed">
-            To be intellectually competent to promote the development of
-            intellectual skills and mastery of academic requirements.
+
+          <div className="w-20 h-[2px] bg-yellow-500 mx-auto mb-6"></div>
+
+          <p className="text-gray-600 text-base sm:text-lg leading-relaxed">
+            At our newly established institution, we blend innovation,
+            discipline and modern teaching skills to create a strong
+            academic foundation for every learner.
           </p>
-          <div className="w-16 h-[2px] bg-yellow-400 mx-auto mt-6" />
-        </div>
+        </motion.div>
 
         {/* Cards */}
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
-          {/* WE BELIEVE */}
-          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#DFF5F1] to-[#BFEAE1] p-10 shadow-lg hover:shadow-2xl transition">
-            <FaLightbulb className=" animate-bounce absolute bottom-6 right-6 text-8xl text-[#1E7F74]/20" />
+          {aimData.map((item, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 60 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: index * 0.2 }}
+              className="group bg-white rounded-2xl border border-gray-200 p-8 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2"
+            >
 
-            <h3 className="text-2xl font-extrabold text-[#1E7F74] mb-4">
-              WE BELIEVE
-            </h3>
-            <p className="text-[#355F5B] text-lg leading-relaxed font-semibold">
-              In a holistic approach to education that fosters intellectual
-              curiosity, emotional resilience, and respect for all individuals,
-              enabling students to become thoughtful and responsible citizens.
-            </p>
+              {/* Icon Box */}
+              <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-yellow-50 text-yellow-500 text-xl mb-6 group-hover:scale-110 transition">
+                {item.icon}
+              </div>
 
-            <button className="mt-8 border border-[#1E7F74] px-6 py-2 rounded-full text-[#1E7F74] font-bold hover:bg-[#1E7F74] hover:text-white transition">
-              ++
-            </button>
-          </div>
+              {/* Title */}
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                {item.title}
+              </h3>
 
-          {/* WE PLEDGE */}
-          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#ECEFF6] to-[#D6DEEE] p-10 shadow-lg hover:shadow-2xl transition">
-            <FaHandshake className=" animate-bounce absolute bottom-6 right-6 text-8xl text-[#2C3E5C]/20" />
+              {/* Description */}
+              <p className="text-gray-600 leading-relaxed text-[15px]">
+                {item.description}
+              </p>
 
-            <h3 className="text-2xl font-extrabold text-[#2C3E5C] mb-4">
-              WE PLEDGE
-            </h3>
-            <p className="text-[#3E4B66] text-lg leading-relaxed font-semibold">
-              To nurture students’ self-worth, dignity, and a strong sense of
-              fairness. We encourage respect for diversity and empathy for all,
-              creating a safe, inclusive, and supportive environment.
-            </p>
+              {/* Bottom Accent Line */}
+              <div className="mt-8 w-10 h-[2px] bg-yellow-500 group-hover:w-16 transition-all duration-500"></div>
 
-            <button className="mt-8 border border-[#2C3E5C] px-6 py-2 rounded-full text-[#2C3E5C] font-bold hover:bg-[#2C3E5C] hover:text-white transition">
-              ++
-            </button>
-          </div>
-
-          {/* WE WANT */}
-          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#FFE6E6] to-[#FBCACA] p-10 shadow-lg hover:shadow-2xl transition ">
-            <FaStar className=" animate-bounce absolute bottom-6 right-6 text-8xl text-[#B33636]/20" />
-
-            <h3 className="text-2xl font-extrabold text-[#B33636] mb-4">
-              WE WANT
-            </h3>
-            <p className="text-[#6B2A2A] text-lg leading-relaxed font-semibold">
-              Our students to be confident, innovative, and kind. We aim to
-              instill leadership qualities, social responsibility, and a
-              lifelong love for learning.
-            </p>
-
-            <button className="mt-8 border border-[#B33636] px-6 py-2 rounded-full text-[#B33636] font-bold hover:bg-[#B33636] hover:text-white transition">
-              ++
-            </button>
-          </div>
+            </motion.div>
+          ))}
 
         </div>
       </div>

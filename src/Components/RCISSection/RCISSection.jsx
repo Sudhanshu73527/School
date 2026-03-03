@@ -26,7 +26,7 @@ const cards = [
     desc: "Smart classrooms, modern labs, digital learning tools, library, and sports facilities.",
     icon: <FaSchool />,
     bg: "from-[#145A32] to-[#0B3D2E]",
-    tag: "Smart Campus"
+    tag: "Smart Class"
   },
   {
     title: "Holistic Development",
@@ -45,13 +45,13 @@ const RCISSection = () => {
         {/* LEFT CONTENT */}
         <div className="text-center lg:text-left">
           <h2 className="text-3xl lg:text-4xl font-extrabold text-[#1B1464] leading-snug mb-5">
-            RC International 
+            Modern Public 
              School <br />
-            <span className="text-[#2563EB]"> Chautarwa, Bagha</span>
+            <span className="text-[#2563EB]"> Mahui, Ramnagar</span>
           </h2>
 
           <p className="text-gray-600 text-sm lg:text-base leading-relaxed mb-7 max-w-xl mx-auto lg:mx-0">
-            RC International School School boasts state-of-the-art infrastructure
+            Modern Public School boasts state-of-the-art infrastructure
             essential for delivering quality education. The school emphasizes moral
             values, discipline, and human ethics, focusing on comprehensive
             personality development alongside a strong academic curriculum.
