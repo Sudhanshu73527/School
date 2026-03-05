@@ -4,6 +4,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import { HiArrowRight } from "react-icons/hi";
 
 import img1 from "../../assets/mod4.png";
+import { Link } from "react-router-dom";
 
 const images = [img1];
 
@@ -85,9 +86,12 @@ const Herosection = () => {
               transition={{ delay: 0.6 }}
               className="mt-8 flex flex-col sm:flex-row gap-4 justify-center md:justify-start"
             >
+
+               <Link to={"/online-registration"}>
               <button className="bg-yellow-400 text-black py-3 px-8 rounded-full font-semibold shadow-xl flex items-center justify-center gap-2 hover:scale-105 transition-all duration-300">
                 Apply Now <HiArrowRight />
               </button>
+              </Link>
 
               <a
                 href="https://wa.me/917352205506"
