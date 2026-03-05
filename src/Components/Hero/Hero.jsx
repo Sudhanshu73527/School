@@ -4,7 +4,6 @@ import { FaWhatsapp } from "react-icons/fa";
 import { HiArrowRight } from "react-icons/hi";
 
 import img1 from "../../assets/mod4.png";
-// import img2 from "../../assets/rc2.jpeg";
 
 const images = [img1];
 
@@ -37,68 +36,79 @@ const Herosection = () => {
         />
       </AnimatePresence>
 
-      {/* Mobile Optimized Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b md:bg-gradient-to-r from-black/80 via-black/60 to-black/20" />
+      {/* Professional Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b md:bg-gradient-to-r from-black/85 via-black/70 to-black/30" />
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col justify-center min-h-screen px-6 md:px-20 py-16">
+      <div className="relative z-10 flex items-center min-h-screen">
+        <div className="w-full max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 py-20">
 
-        {/* Badge */}
-        <motion.span
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          className="bg-yellow-400 text-black px-4 py-1 rounded-full text-xs md:text-sm font-semibold w-fit"
-        >
-          Admissions Open 2026-27
-        </motion.span>
+          <div className="max-w-3xl text-center md:text-left mx-auto md:mx-0">
 
-        {/* Heading */}
-        <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="mt-6 text-3xl sm:text-4xl md:text-6xl font-extrabold leading-tight max-w-3xl"
-        >
-          Building Future Leaders <br />
-          <span className="text-yellow-400">
-           With Modern Public School
-          </span>
-        </motion.h1>
+            {/* Badge */}
+            <motion.span
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className="inline-block bg-yellow-400 text-black px-5 py-2 rounded-full text-xs sm:text-sm font-semibold tracking-wide shadow-lg"
+            >
+              Admissions Open 2026-27
+            </motion.span>
 
-        {/* Description */}
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.3 }}
-          className="mt-5 text-sm sm:text-base md:text-lg text-gray-200 max-w-xl leading-relaxed"
-        >
-          भविष्य की चुनौतियों के लिए तैयार करने वाला प्रगतिशील शिक्षण वातावरण,
-          जहाँ शिक्षा के साथ-साथ चरित्र, नेतृत्व और आत्मविश्वास का विकास किया जाता है।
-        </motion.p>
+            {/* Heading */}
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="mt-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight"
+            >
+              Building Future Leaders <br className="hidden sm:block" />
+              <span className="text-yellow-400">
+                With Modern Public School
+              </span>
+            </motion.h1>
 
-        {/* Buttons */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.6 }}
-          className="mt-8 flex flex-col sm:flex-row gap-4 w-full sm:w-auto"
-        >
-          <button className="w-full sm:w-auto bg-yellow-400 text-black py-3 px-8 rounded-full font-semibold shadow-lg flex items-center justify-center gap-2 hover:scale-105 transition-all">
-            Apply Now <HiArrowRight />
-          </button>
-        </motion.div>
+            {/* Description */}
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.3 }}
+              className="mt-6 text-sm sm:text-base md:text-lg text-gray-200 leading-relaxed max-w-xl mx-auto md:mx-0"
+            >
+              भविष्य की चुनौतियों के लिए तैयार करने वाला प्रगतिशील शिक्षण वातावरण,
+              जहाँ शिक्षा के साथ-साथ चरित्र, नेतृत्व और आत्मविश्वास का विकास किया जाता है।
+            </motion.p>
 
-        {/* Mobile Friendly Info Card */}
-  
+            {/* Buttons */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.6 }}
+              className="mt-8 flex flex-col sm:flex-row gap-4 justify-center md:justify-start"
+            >
+              <button className="bg-yellow-400 text-black py-3 px-8 rounded-full font-semibold shadow-xl flex items-center justify-center gap-2 hover:scale-105 transition-all duration-300">
+                Apply Now <HiArrowRight />
+              </button>
 
+              <a
+                href="https://wa.me/917352205506"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border border-white/40 backdrop-blur-md py-3 px-8 rounded-full font-semibold hover:bg-white hover:text-black transition-all duration-300 flex items-center justify-center"
+              >
+                Enquire Now
+              </a>
+            </motion.div>
+
+          </div>
+        </div>
       </div>
 
-      {/* WhatsApp */}
+      {/* WhatsApp Floating Button */}
       <motion.a
         href="https://wa.me/917352205506"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-5 right-5 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-xl z-50"
+        className="fixed bottom-5 right-5 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-2xl z-50"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
       >

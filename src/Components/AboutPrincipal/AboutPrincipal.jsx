@@ -33,10 +33,10 @@ const Principal = () => {
             {/* Name Badge */}
             <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 bg-white shadow-xl px-6 py-3 rounded-full text-center">
               <p className="text-base font-semibold text-gray-900">
-                Mr. Ashish Singh
+                Mr. R.K Sharma 
               </p>
               <p className="text-xs uppercase tracking-widest text-emerald-600">
-                Principal
+                Director 
               </p>
             </div>
 
@@ -52,7 +52,7 @@ const Principal = () => {
           className="text-center lg:text-left"
         >
           <span className="text-xs uppercase tracking-[0.4em] text-emerald-600 font-semibold">
-            Principal’s Message
+            Director Message
           </span>
 
           <h2 className="mt-6 text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
