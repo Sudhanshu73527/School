@@ -18,14 +18,28 @@ const Onlineregstration = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formData);
-    alert("Registration Submitted Successfully!");
+
+    const message = `New Student Registration
+
+Student Name: ${formData.studentName}
+Class Applying For: ${formData.studentClass}
+Student Aadhaar: ${formData.studentAadhaar}
+
+Parent Name: ${formData.parentName}
+Parent Mobile: ${formData.parentMobile}
+Parent Aadhaar: ${formData.parentAadhaar}
+
+Address: ${formData.address}
+`;
+
+    const whatsappURL = `https://wa.me/919905992967?text=${encodeURIComponent(message)}`;
+
+    window.open(whatsappURL, "_blank");
   };
 
   return (
     <section className="py-14 sm:py-16 px-4 sm:px-8 md:px-16 bg-gradient-to-br from-blue-50 via-white to-green-50">
 
-      {/* Heading */}
       <div className="text-center max-w-3xl mx-auto mb-10">
         <h2 className="text-3xl sm:text-4xl font-bold text-gray-800">
           Online Registration
@@ -35,7 +49,6 @@ const Onlineregstration = () => {
         </p>
       </div>
 
-      {/* Form Card */}
       <motion.div
         className="max-w-4xl mx-auto bg-white p-6 sm:p-10 rounded-2xl shadow-xl"
         initial={{ opacity: 0, y: 40 }}
@@ -44,7 +57,6 @@ const Onlineregstration = () => {
       >
         <form onSubmit={handleSubmit} className="space-y-6">
 
-          {/* Student Details */}
           <div>
             <h3 className="text-lg font-semibold text-gray-800 mb-4">
               Student Details
@@ -84,7 +96,6 @@ const Onlineregstration = () => {
             </div>
           </div>
 
-          {/* Parent Details */}
           <div>
             <h3 className="text-lg font-semibold text-gray-800 mb-4">
               Parent Details
@@ -124,7 +135,6 @@ const Onlineregstration = () => {
             </div>
           </div>
 
-          {/* Address */}
           <div>
             <textarea
               name="address"
@@ -137,7 +147,6 @@ const Onlineregstration = () => {
             />
           </div>
 
-          {/* Submit Button */}
           <div className="text-center pt-4">
             <button
               type="submit"

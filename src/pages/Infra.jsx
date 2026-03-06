@@ -9,13 +9,18 @@ import img3 from "../assets/mod4.png";
 import img4 from "../assets/class2.png";
 import img5 from "../assets/class4.png";
 import img6 from "../assets/class5.png";
+import img7 from "../assets/newmod1.png";
+// import img8 from "../assets/newmod2.jpeg";
+import img9 from "../assets/newmod3.jpeg";
+
+
 // import img7 from "../../assets/aryy3.png";
 // import img8 from "../../assets/bhat5.jpeg";
 // import img9 from "../../assets/bhat4.jpeg";
 // import img10 from "../../assets/bhat3.jpeg";
 
 const images = [
-  img1,img3,img5,img2,img4,img5
+  img1,img3,img5,img2,img4,img5,img6,img7,img9
 ];
 
 const Infra = () => {

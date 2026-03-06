@@ -5,6 +5,7 @@ import {
   FaSchool,
   FaUsers
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const cards = [
   {
@@ -57,10 +58,12 @@ const RCISSection = () => {
             personality development alongside a strong academic curriculum.
           </p>
 
+       <Link to={"/about-school"}>
           <button className="bg-[#3B82F6] hover:bg-[#2563EB] transition-all duration-300 
           text-white px-7 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl">
             Learn More
           </button>
+          </Link>
         </div>
 
         {/* RIGHT CARDS */}

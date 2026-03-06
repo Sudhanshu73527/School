@@ -74,13 +74,13 @@ const Principal = () => {
             a rapidly evolving world.
           </p>
 
-          <motion.button
+          {/* <motion.button
             whileHover={{ y: -3 }}
             whileTap={{ scale: 0.96 }}
             className="bg-emerald-600 text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:bg-emerald-700 transition-all"
           >
             Read Full Message
-          </motion.button>
+          </motion.button> */}
         </motion.div>
 
       </div>

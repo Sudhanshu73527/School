@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaWhatsapp } from "react-icons/fa";
 import { HiArrowRight } from "react-icons/hi";
+import { Link } from "react-router-dom";
 
 import img1 from "../../assets/mod4.png";
-import { Link } from "react-router-dom";
 
 const images = [img1];
 
@@ -37,7 +37,7 @@ const Herosection = () => {
         />
       </AnimatePresence>
 
-      {/* Professional Overlay */}
+      {/* Overlay */}
       <div className="absolute inset-0 bg-gradient-to-b md:bg-gradient-to-r from-black/85 via-black/70 to-black/30" />
 
       {/* Content */}
@@ -84,30 +84,35 @@ const Herosection = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6 }}
-              className="mt-8 flex flex-col sm:flex-row gap-4 justify-center md:justify-start"
+              className="mt-8 flex flex-col sm:flex-row gap-4 justify-center md:justify-start w-full"
             >
-
-               <Link to={"/online-registration"}>
-              <button className="bg-yellow-400 text-black py-3 px-8 rounded-full font-semibold shadow-xl flex items-center justify-center gap-2 hover:scale-105 transition-all duration-300">
-                Apply Now <HiArrowRight />
-              </button>
+              <Link to={"/online-registration"} className="w-full sm:w-auto">
+                <button className="bg-yellow-400 text-black py-3 px-8 rounded-full font-semibold shadow-xl flex items-center justify-center gap-2 w-full hover:scale-105 transition-all duration-300">
+                  Apply Now
+                  {/* Arrow only on mobile */}
+                  <span className="sm:hidden">
+                    <HiArrowRight />
+                  </span>
+                </button>
               </Link>
 
+       <Link to={"/contact"}>
               <a
-                href="https://wa.me/917352205506"
+                href=""
                 target="_blank"
                 rel="noopener noreferrer"
-                className="border border-white/40 backdrop-blur-md py-3 px-8 rounded-full font-semibold hover:bg-white hover:text-black transition-all duration-300 flex items-center justify-center"
+                className="border border-white/40 backdrop-blur-md py-3 px-8 rounded-full font-semibold hover:bg-white hover:text-black transition-all duration-300 flex items-center justify-center w-full sm:w-auto"
               >
                 Enquire Now
               </a>
+              </Link>
             </motion.div>
 
           </div>
         </div>
       </div>
 
-      {/* WhatsApp Floating Button */}
+      {/* Floating WhatsApp Button */}
       <motion.a
         href="https://wa.me/917352205506"
         target="_blank"

@@ -26,7 +26,6 @@ const Footer = () => {
         {/* School Info */}
         <div>
           <div className="flex items-center gap-3 mb-4">
-            {/* <FaSchool className="text-green-700 text-2xl" /> */}
             <h3 className="text-2xl font-bold text-green-800">
              Modern Public School 
             </h3>
@@ -73,8 +72,8 @@ const Footer = () => {
             <li className="flex gap-3">
               <FaMapMarkerAlt className="text-green-700 mt-1" />
               <span>
-                Near Main Road, City Name <br />
-                State – 000000, India
+                Mahui, Ramnagar <br />
+                Bihar – West-Champaran, 845106 , India
               </span>
             </li>
             <li className="flex items-center gap-3">
@@ -121,12 +120,25 @@ const Footer = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-green-200 py-5 text-center text-sm text-gray-600">
-        © {new Date().getFullYear()}{" "}
-        <span className="font-semibold text-green-800">
-          Modern Public School 
+      <div className="border-t border-green-200 py-5 text-center text-sm text-gray-600 flex flex-col sm:flex-row justify-center items-center gap-2">
+        <span>
+          © {new Date().getFullYear()}{" "}
+          <span className="font-semibold text-green-800">
+            Modern Public School 
+          </span>
+          . All Rights Reserved.
         </span>
-        . All Rights Reserved.
+        <span>
+          Powered by{" "}
+          <a
+            href="https://www.webala.in"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-green-800 font-semibold hover:underline"
+          >
+            Webala
+          </a>
+        </span>
       </div>
     </footer>
   );

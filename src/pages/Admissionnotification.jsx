@@ -7,6 +7,18 @@ const Admissionnotification = () => {
   return (
     <section className="py-14 sm:py-16 px-4 sm:px-8 md:px-16 bg-gradient-to-br from-yellow-50 via-white to-red-50">
 
+      {/* Top Banner */}
+      <motion.div
+        className="max-w-4xl mx-auto mb-10 bg-blue-100 border-l-4 border-blue-500 text-blue-700 px-6 py-4 rounded-xl text-center text-sm sm:text-base font-semibold"
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        🎓 We are offering <span className="font-bold">FREE Admission</span>!  
+        For quality education, visit our school or complete your admission 
+        <span className="font-bold"> online from home</span>.
+      </motion.div>
+
       {/* Heading */}
       <div className="text-center max-w-3xl mx-auto mb-10">
         <motion.div
@@ -73,10 +85,10 @@ const Admissionnotification = () => {
         </p>
 
         <div className="mt-6">
-        <Link to={"/online-registration"}>
-          <button className="bg-green-600 text-white px-8 py-3 rounded-xl hover:bg-green-700 transition w-full sm:w-auto">
-            Apply Now
-          </button>
+          <Link to={"/online-registration"}>
+            <button className="bg-green-600 text-white px-8 py-3 rounded-xl hover:bg-green-700 transition w-full sm:w-auto">
+              Apply Now
+            </button>
           </Link>
         </div>
       </div>

@@ -29,44 +29,54 @@ const Navbar = () => {
       name: "ACADEMICS",
       subItems: [
         { label: "Pre-Primary", path: "/pre-primary" },
-        { label: "Primary", path: "/primary" }
+        { label: "Primary", path: "/primary" },
       ],
     },
     {
       name: "ADMISSION",
       subItems: [
         { label: "Admission Process", path: "/admission-process" },
-        { label: "Online Registration", path: "/online-registration" },
         { label: "Admission Notification", path: "/notification" },
+        {
+          label: "Online Admission Registration",
+          path: "/online-registration",
+        },
       ],
     },
-  
+
     { name: "GALLERY", path: "/gallery" },
     {
       name: "EXTRA CURRICULUM",
       subItems: [
-        { label: "Music", path: "/extra-curriculum/music" },
-        { label: "Dance", path: "/extra-curriculum/dance" },
-        { label: "Yoga", path: "/extra-curriculum/yoga" },
-        { label: "Art & Craft", path: "/extra-curriculum/art-craft" },
+        { label: "Music", path: "/music" },
+        { label: "Dance", path: "/dance" },
+        { label: "Yoga", path: "/yoga" },
       ],
     },
     {
       name: "MANDATORY DETAILS",
       subItems: [
-        { label: "CBSE Info", path: "/mandatory/cbse-info" },
+        { label: "CBSE Info", path: "cbse-info" },
         { label: "Staff Details", path: "/mandatory/staff-details" },
-        { label: "Affiliation", path: "/mandatory/affiliation" },
-        { label: "Fee Structure", path: "/mandatory/fee" },
-        { label: "Student Details", path: "/mandatory/student"}
-
+        { label: "Fee Structure", path: "/fee" },
+        { label: "Student Details", path: "/student" },
       ],
     },
+
+    {
+      name: "CONTACT",
+      subItems: [
+        { label: "Contact Us", path: "/contact" },
+        
+      ],
+    },
+
+
+    
   ];
 
   return (
     <header className="w-full shadow-md font-outfit top-0 z-50">
-
       {/* Top Bar */}
       <div className="bg-green-800 text-white text-xs md:text-sm hidden md:block">
         <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-2">
@@ -82,22 +92,20 @@ const Navbar = () => {
           </div>
 
           <div className="flex items-center space-x-6">
-          <Link to={"/online-registration"}>
-             <span className="cursor-pointer hover:text-yellow-400 transition">
-              CBSE
-            </span>
-          </Link>
-          
+            <Link to={"/cbse-info"}>
+              <span className="cursor-pointer hover:text-yellow-400 transition">
+                CBSE
+              </span>
+            </Link>
+
             <span className="flex items-center space-x-2 cursor-pointer hover:text-yellow-400 transition">
               <FaLock /> <span>Login</span>
             </span>
             <Link to={"/online-registration"}>
-               <button className="bg-yellow-400 text-white font-semibold px-5 py-1 rounded-sm hover:bg-yellow-300 transition">
-              APPLY NOW
-            </button>
+              <button className="bg-yellow-400 text-white font-semibold px-5 py-1 rounded-sm hover:bg-yellow-300 transition">
+                APPLY NOW
+              </button>
             </Link>
-           
-
           </div>
         </div>
       </div>
@@ -106,8 +114,12 @@ const Navbar = () => {
       <div className="bg-white border-b">
         <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
           <div className="flex items-center gap-2 md:gap-3 min-w-0">
-          <Link to={"/"}>
-            <img src={logo} alt="logo" className="h-14 md:h-20 w-auto cursor-pointer" />
+            <Link to={"/"}>
+              <img
+                src={logo}
+                alt="logo"
+                className="h-14 md:h-20 w-auto cursor-pointer"
+              />
             </Link>
             <h1 className="text-sm font-bold text-green-700 uppercase md:hidden truncate">
               Modern Public School
@@ -137,16 +149,15 @@ const Navbar = () => {
         <ul className="max-w-7xl mx-auto flex justify-between px-4 text-white font-semibold">
           {navItems.map((item, i) => (
             <li key={i} className="px-3 py-3 relative group">
-              {item.path ? (
-                <Link to={item.path}>{item.name}</Link>
-              ) : (
-                item.name
-              )}
+              {item.path ? <Link to={item.path}>{item.name}</Link> : item.name}
 
               {item.subItems && (
                 <ul className="absolute top-full left-0 mt-3 bg-white text-gray-800 shadow-xl rounded-xl min-w-[240px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                   {item.subItems.map((sub, idx) => (
-                    <li key={idx} className="px-5 py-3 text-sm hover:bg-green-50">
+                    <li
+                      key={idx}
+                      className="px-5 py-3 text-sm hover:bg-green-50"
+                    >
                       <Link to={sub.path}>{sub.label}</Link>
                     </li>
                   ))}
@@ -177,12 +188,16 @@ const Navbar = () => {
               className="fixed top-0 left-0 w-full bg-white z-50 rounded-b-3xl lg:hidden"
             >
               <div className="flex items-center gap-2 px-4 py-4 border-b">
-              <Link to={"/"}>
-                <img src={logo} alt="logo" className="h-11 w-auto cursor-pointer" />
+                <Link to={"/"}>
+                  <img
+                    src={logo}
+                    alt="logo"
+                    className="h-11 w-auto cursor-pointer"
+                  />
                 </Link>
 
                 <h2 className="font-semibold text-green-800 text-sm flex-1 truncate">
-                  Modern Public School 
+                  Modern Public School
                 </h2>
                 <button onClick={() => setMenuOpen(false)}>
                   <FaTimes className="text-xl text-green-800" />
@@ -209,9 +224,7 @@ const Navbar = () => {
                           }
                         >
                           {item.name}
-                          <span>
-                            {openSubmenu === i ? "−" : "+"}
-                          </span>
+                          <span>{openSubmenu === i ? "−" : "+"}</span>
                         </div>
 
                         {item.subItems && openSubmenu === i && (
