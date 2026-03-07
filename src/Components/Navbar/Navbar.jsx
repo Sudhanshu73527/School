@@ -248,11 +248,16 @@ const Navbar = () => {
                 ))}
               </ul>
 
-              <div className="p-4">
-                <button className="w-full bg-green-800 text-white py-3 rounded-xl font-semibold">
-                  Apply for Admission
-                </button>
-              </div>
+             <div className="p-4">
+  <Link
+    to={"/online-registration"}
+    onClick={() => setMenuOpen(false)}
+  >
+    <button className="w-full bg-green-800 text-white py-3 rounded-xl font-semibold">
+      Apply for Admission
+    </button>
+  </Link>
+</div>
             </motion.div>
           </>
         )}
