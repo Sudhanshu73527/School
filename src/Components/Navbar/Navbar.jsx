@@ -37,10 +37,12 @@ const Navbar = () => {
       subItems: [
         { label: "Admission Process", path: "/admission-process" },
         { label: "Admission Notification", path: "/notification" },
+        {label: "Admission Structure", path: "/Amissionstructure"},
         {
           label: "Online Admission Registration",
           path: "/online-registration",
         },
+
       ],
     },
 
@@ -83,7 +85,7 @@ const Navbar = () => {
           <div className="flex items-center space-x-6">
             <span className="flex items-center space-x-2">
               <FaPhoneAlt className="text-yellow-400" />
-              <span>+91-7352205506</span>
+              <span>+91 99059 92967</span>
             </span>
             <span className="flex items-center space-x-2">
               <FaEnvelope className="text-yellow-400" />

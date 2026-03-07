@@ -17,6 +17,7 @@ import Cbseinfo from "../pages/Cbseinfo";
 import Studentdetails from "../pages/Studentdetails";
 import Rte from "../pages/Rte";
 import Contact from "../pages/Contact";
+import Amissionstructure from "../pages/Amissionstructure";
 
 
 
@@ -43,6 +44,7 @@ const router = createBrowserRouter([
      {path: "/student", element: <Studentdetails/>},
      {path: "/rte", element: <Rte/>},
      {path: "/contact", element: <Contact/>},
+     {path: "/Amissionstructure", element: <Amissionstructure/>},
  ],
   },
 ]);

@@ -8,6 +8,9 @@ const images = [
   "/class4.png",
   "/class5.png",
   "/class6.jpeg",
+  "/newmod1.png",
+  "newmod3.jpeg"
+
 ];
 
 const Gallary = () => {

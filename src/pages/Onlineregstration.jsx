@@ -42,7 +42,7 @@ Address: ${formData.address}
 
       <div className="text-center max-w-3xl mx-auto mb-10">
         <h2 className="text-3xl sm:text-4xl font-bold text-gray-800">
-          Online Registration
+          Online Admission Registration
         </h2>
         <p className="text-gray-600 mt-3 text-sm sm:text-base leading-relaxed">
           Please fill in the details carefully to complete the online admission registration.
