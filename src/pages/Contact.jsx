@@ -59,7 +59,7 @@ ${formData.message}
             <FaPhoneAlt className="text-green-600 text-xl mt-1" />
             <div>
               <h4 className="font-semibold text-gray-800">Phone</h4>
-              <p className="text-gray-600">+91 99059 92967</p>
+              <p className="text-gray-600">+91 9939995043</p>
             </div>
           </div>
 

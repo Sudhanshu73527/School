@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaFileAlt, FaUserCheck, FaMoneyBillWave, FaClipboardList } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const steps = [
   {
@@ -77,9 +78,11 @@ const Admissionprocess = () => {
         </p>
 
         <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center">
+        <Link to={"/online-registration"}>
           <button className="bg-green-600 text-white px-6 py-3 rounded-xl hover:bg-green-700 transition">
             Apply Online
           </button>
+          </Link>
 
           <button className="border border-green-600 text-green-600 px-6 py-3 rounded-xl hover:bg-green-50 transition">
             Visit School Campus
