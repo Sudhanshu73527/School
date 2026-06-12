@@ -1,9 +1,9 @@
-const Notice = require("../Models/Notice");
+import { create, find, findById, findByIdAndUpdate, findByIdAndDelete } from "../models/notice";
 
 // Add Notice
-exports.addNotice = async (req, res) => {
+export async function addNotice(req, res) {
   try {
-    const notice = await Notice.create(req.body);
+    const notice = await create(req.body);
 
     res.status(201).json({
       success: true,
@@ -16,12 +16,12 @@ exports.addNotice = async (req, res) => {
       message: error.message,
     });
   }
-};
+}
 
 // Get All Notices
-exports.getAllNotices = async (req, res) => {
+export async function getAllNotices(req, res) {
   try {
-    const notices = await Notice.find().sort({
+    const notices = await find().sort({
       createdAt: -1,
     });
 
@@ -32,12 +32,12 @@ exports.getAllNotices = async (req, res) => {
       message: error.message,
     });
   }
-};
+}
 
 // Get Single Notice
-exports.getNoticeById = async (req, res) => {
+export async function getNoticeById(req, res) {
   try {
-    const notice = await Notice.findById(req.params.id);
+    const notice = await findById(req.params.id);
 
     res.status(200).json(notice);
   } catch (error) {
@@ -46,12 +46,12 @@ exports.getNoticeById = async (req, res) => {
       message: error.message,
     });
   }
-};
+}
 
 // Update Notice
-exports.updateNotice = async (req, res) => {
+export async function updateNotice(req, res) {
   try {
-    const notice = await Notice.findByIdAndUpdate(
+    const notice = await findByIdAndUpdate(
       req.params.id,
       req.body,
       {
@@ -70,12 +70,12 @@ exports.updateNotice = async (req, res) => {
       message: error.message,
     });
   }
-};
+}
 
 // Delete Notice
-exports.deleteNotice = async (req, res) => {
+export async function deleteNotice(req, res) {
   try {
-    await Notice.findByIdAndDelete(req.params.id);
+    await findByIdAndDelete(req.params.id);
 
     res.status(200).json({
       success: true,
@@ -87,4 +87,4 @@ exports.deleteNotice = async (req, res) => {
       message: error.message,
     });
   }
-};
+}
