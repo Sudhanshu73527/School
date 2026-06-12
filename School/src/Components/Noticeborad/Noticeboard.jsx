@@ -12,7 +12,7 @@ const Noticeboard = () => {
   const fetchNotices = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:5000/api/notices"
+        "https://school-backend-o5im.onrender.com/api/notices" 
       );
 
       setNotices(res.data);

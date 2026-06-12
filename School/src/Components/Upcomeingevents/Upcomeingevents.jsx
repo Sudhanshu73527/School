@@ -12,7 +12,7 @@ const UpcomingEvents = () => {
   const fetchEvents = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:5000/api/events"
+        "https://school-backend-o5im.onrender.com/api/events"
       );
 
       setEvents(res.data);
@@ -85,7 +85,7 @@ const UpcomingEvents = () => {
                 <div className="relative h-56 overflow-hidden">
 
                   <img
-                    src={`http://localhost:5000/uploads/${event.image}`}
+                    src={`https://school-backend-o5im.onrender.com/uploads/${event.image}`}
                     alt={event.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
