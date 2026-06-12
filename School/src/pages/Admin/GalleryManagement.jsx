@@ -16,7 +16,7 @@ const GalleryManagement = () => {
     async () => {
       const res =
         await axios.get(
-          "http://localhost:5000/api/gallery"
+          "https://school-backend-o5im.onrender.com/api/gallery"
         );
 
       setImages(res.data);
@@ -39,7 +39,7 @@ const GalleryManagement = () => {
       );
 
       await axios.post(
-        "http://localhost:5000/api/gallery",
+        "https://school-backend-o5im.onrender.com/api/gallery",
         formData
       );
 
@@ -55,7 +55,7 @@ const GalleryManagement = () => {
   const handleDelete =
     async (id) => {
       await axios.delete(
-        `http://localhost:5000/api/gallery/${id}`
+        `https://school-backend-o5im.onrender.com/api/gallery/${id}`
       );
 
       fetchImages();
@@ -102,7 +102,7 @@ const GalleryManagement = () => {
             className="bg-white rounded-xl shadow"
           >
             <img
-              src={`http://localhost:5000/uploads/${img.image}`}
+              src={`https://school-backend-o5im.onrender.com/uploads/${img.image}`}
               alt=""
               className="w-full h-48 object-cover rounded-t-xl"
             />

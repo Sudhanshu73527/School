@@ -25,7 +25,7 @@ const HomeworkManagement = () => {
  useState(null);
 
  const API =
- "http://localhost:5000/api/homework";
+ "https://school-backend-o5im.onrender.com/api/homework";
 
  const fetchHomework =
  async () => {

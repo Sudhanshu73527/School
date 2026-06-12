@@ -17,7 +17,7 @@ const AdmissionNotificationManagement = () => {
   const fetchData = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:5000/api/admission-notification"
+        "https://school-backend-o5im.onrender.com/api/admission-notification"
       );
 
       if (res.data) {
@@ -47,7 +47,7 @@ const AdmissionNotificationManagement = () => {
 
     try {
       await axios.put(
-        "http://localhost:5000/api/admission-notification",
+        "https://school-backend-o5im.onrender.com/api/admission-notification",
         {
           admissionOpen,
           startDate,

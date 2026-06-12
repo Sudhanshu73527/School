@@ -18,7 +18,7 @@ const Admissionnotification = () => {
   const fetchAdmissionNotification = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:5000/api/admission-notification"
+        "https://school-backend-o5im.onrender.com/api/admission-notification"
       );
 
       if (res.data) {
@@ -99,7 +99,7 @@ const Admissionnotification = () => {
 
           <p className="text-gray-600 mt-2 font-medium">
             {admissionData.lastDate}
-          </p>
+          </p> 
         </motion.div>
 
       </div>

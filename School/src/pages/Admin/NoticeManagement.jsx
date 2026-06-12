@@ -10,7 +10,7 @@ const NoticeManagement = () => {
 
   const [editingId, setEditingId] = useState(null);
 
-  const API_URL = "http://localhost:5000/api/notices";
+  const API_URL = "https://school-backend-o5im.onrender.com/api/notices";
 
   // Fetch Notices
   const fetchNotices = async () => {

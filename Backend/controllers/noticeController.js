@@ -25,7 +25,7 @@ exports.getAllNotices = async (req, res) => {
       createdAt: -1,
     });
 
-    res.status(200).json(notices);
+    res.status(200).json(notices); 
   } catch (error) {
     res.status(500).json({
       success: false,

@@ -12,7 +12,7 @@ const Gallary = () => {
   const fetchGalleryImages = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:5000/api/gallery"
+        "https://school-backend-o5im.onrender.com/api/gallery"
       );
 
       setImages(res.data);
@@ -62,7 +62,7 @@ const Gallary = () => {
             viewport={{ once: true }}
           >
             <img
-              src={`http://localhost:5000/uploads/${img.image}`}
+              src={`https://school-backend-o5im.onrender.com/uploads/${img.image}`}
               alt="School Gallery"
               className="w-full h-60 object-cover transform group-hover:scale-110 transition duration-500"
             />

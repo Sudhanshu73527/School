@@ -24,7 +24,7 @@ const Homework = () => {
   const fetchHomework = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:5000/api/homework"
+        "https://school-backend-o5im.onrender.com/api/homework"
       );
 
       setHomeworkData(res.data);

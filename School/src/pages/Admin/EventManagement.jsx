@@ -11,7 +11,7 @@ const EventManagement = () => {
 
   const [editingId, setEditingId] = useState(null);
 
-  const API = "http://localhost:5000/api/events";
+  const API = "https://school-backend-o5im.onrender.com/api/events";
 
   const fetchEvents = async () => {
     try {
@@ -186,7 +186,7 @@ const EventManagement = () => {
             className="bg-white rounded-2xl shadow-lg overflow-hidden"
           >
             <img
-              src={`http://localhost:5000/uploads/${event.image}`}
+              src={`https://school-backend-o5im.onrender.com/uploads/${event.image}`}
               alt={event.title}
               className="w-full h-56 object-cover"
             />
