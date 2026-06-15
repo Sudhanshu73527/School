@@ -122,13 +122,13 @@ const Navbar = () => {
               />
             </Link>
             <h1 className="text-sm font-bold text-green-700 uppercase md:hidden truncate">
-              Modern Public Schoolll
+              Modern Public School
             </h1>
           </div>
 
           <div className="text-center flex-1 hidden md:block">
             <h1 className="text-3xl font-extrabold text-green-800 uppercase">
-              Modern Public Schoolll
+              Modern Public School
             </h1>
             <h2 className="text-xl font-bold text-purple-800">
               Mahui, Ramnagar-845106
@@ -190,7 +190,7 @@ const Navbar = () => {
               <div className="flex items-center gap-2 px-4 py-4 border-b">
                 <Link to={"/"}>
                   <img
-                    src="/modern.jpeg"
+                    src={"/modern.jpeg"}
                     alt="logo"
                     className="h-11 w-auto cursor-pointer"
                   />
