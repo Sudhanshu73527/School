@@ -7,7 +7,6 @@ import {
   FaTimes,
 } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
-// import logo from "../../assets/modern.png";
 import { Link, Links } from "react-router-dom";
 import { label, path } from "framer-motion/client";
 
@@ -187,12 +186,11 @@ const Navbar = () => {
               exit={{ y: "-100%" }}
               transition={{ duration: 0.35 }}
               className="fixed top-0 left-0 w-full bg-white z-50 rounded-b-3xl lg:hidden"
-
             >
-              {/* <div className="flex items-center gap-2 px-4 py-4 border-b">
+              <div className="flex items-center gap-2 px-4 py-4 border-b">
                 <Link to={"/"}>
                   <img
-                    src={logo}
+                    src="/modern.jpeg"
                     alt="logo"
                     className="h-11 w-auto cursor-pointer"
                   />
@@ -204,8 +202,7 @@ const Navbar = () => {
                 <button onClick={() => setMenuOpen(false)}>
                   <FaTimes className="text-xl text-green-800" />
                 </button>
-              </div> */}
-              
+              </div>
 
               <ul className="divide-y">
                 {navItems.map((item, i) => (
