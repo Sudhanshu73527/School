@@ -79,11 +79,11 @@ const Noticeboard = () => {
                   {notice.description}
                 </p>
 
-                <div className="mt-6">
+                {/* <div className="mt-6">
                   <button className="bg-green-700 hover:bg-green-800 text-white px-6 py-3 rounded-xl font-medium transition">
                     Read Full Notice
                   </button>
-                </div>
+                </div> */}
               </div>
             </div>
           ))

@@ -37,12 +37,11 @@ const Navbar = () => {
       subItems: [
         { label: "Admission Process", path: "/admission-process" },
         { label: "Admission Notification", path: "/notification" },
-        {label: "Admission Structure", path: "/Amissionstructure"},
+        { label: "Admission Structure", path: "/Amissionstructure" },
         {
           label: "Online Admission Registration",
           path: "/online-registration",
         },
-
       ],
     },
 
@@ -68,14 +67,8 @@ const Navbar = () => {
 
     {
       name: "CONTACT",
-      subItems: [
-        { label: "Contact Us", path: "/contact" },
-        
-      ],
+      subItems: [{ label: "Contact Us", path: "/contact" }],
     },
-
-
-    
   ];
 
   return (
@@ -101,10 +94,13 @@ const Navbar = () => {
               </span>
             </Link>
 
-   <Link to="/admin-login" className="flex items-center space-x-2 hover:text-yellow-400">
-  <FaLock />
-  <span>Login</span>
-</Link>
+            <Link
+              to="/admin-login"
+              className="flex items-center space-x-2 hover:text-yellow-400"
+            >
+              <FaLock />
+              <span>Login</span>
+            </Link>
 
             <Link to={"/online-registration"}>
               <button className="bg-yellow-400 text-white font-semibold px-5 py-1 rounded-sm hover:bg-yellow-300 transition">
@@ -191,8 +187,9 @@ const Navbar = () => {
               exit={{ y: "-100%" }}
               transition={{ duration: 0.35 }}
               className="fixed top-0 left-0 w-full bg-white z-50 rounded-b-3xl lg:hidden"
+
             >
-              <div className="flex items-center gap-2 px-4 py-4 border-b">
+              {/* <div className="flex items-center gap-2 px-4 py-4 border-b">
                 <Link to={"/"}>
                   <img
                     src={logo}
@@ -207,7 +204,8 @@ const Navbar = () => {
                 <button onClick={() => setMenuOpen(false)}>
                   <FaTimes className="text-xl text-green-800" />
                 </button>
-              </div>
+              </div> */}
+              
 
               <ul className="divide-y">
                 {navItems.map((item, i) => (
@@ -253,16 +251,13 @@ const Navbar = () => {
                 ))}
               </ul>
 
-             <div className="p-4">
-  <Link
-    to={"/online-registration"}
-    onClick={() => setMenuOpen(false)}
-  >
-    <button className="w-full bg-green-800 text-white py-3 rounded-xl font-semibold">
-      Apply for Admission
-    </button>
-  </Link>
-</div>
+              <div className="p-4">
+                <Link to={"/admin-login"} onClick={() => setMenuOpen(false)}>
+                  <button className="w-full bg-green-800 text-white py-3 rounded-xl font-semibold">
+                    Admin Login
+                  </button>
+                </Link>
+              </div>
             </motion.div>
           </>
         )}
