@@ -122,13 +122,13 @@ const Navbar = () => {
               />
             </Link>
             <h1 className="text-sm font-bold text-green-700 uppercase md:hidden truncate">
-              Modern Public School
+              Modern Public Schoolll
             </h1>
           </div>
 
           <div className="text-center flex-1 hidden md:block">
             <h1 className="text-3xl font-extrabold text-green-800 uppercase">
-              Modern Public School
+              Modern Public Schoolll
             </h1>
             <h2 className="text-xl font-bold text-purple-800">
               Mahui, Ramnagar-845106
