@@ -20,6 +20,7 @@ import Mission from './Components/Mission/Mission'
 import Classroom from './Components/Classroom/Classroom'
 import Principal from './Components/Principal/Principal'
 import Noticeboard from './Components/Noticeborad/Noticeboard'
+import Recentactivities from './Components/Recentactivites/Recentactivites'
 // import NoticeBoard from './Components/NoticeBoard/NoticeBoard'
 // import SchoolHighlight from './Components/SchoolHighlight/SchoolHighlight'
 
@@ -34,6 +35,7 @@ const App = () => {
       {/* <InfoCards/> */}
       <AboutSchool/>
       <Noticeboard/>
+      <Recentactivities/>
       <AboutPrincipal/>
       <Principal/>
       <Mission/>

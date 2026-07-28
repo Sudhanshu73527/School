@@ -4,9 +4,13 @@ import { FaWhatsapp } from "react-icons/fa";
 import { HiArrowRight } from "react-icons/hi";
 import { Link } from "react-router-dom";
 
-import img1 from "../../assets/mod4.png";
+import img1 from "../../assets/mode1.jpeg";
+import img2 from "../../assets/mode2.jpeg";
+import img3 from "../../assets/mode3.jpeg";
+import img4 from "../../assets/mode4.jpeg";
 
-const images = [img1];
+
+const images = [img1,img2,img3,img4];
 
 const Herosection = () => {
   const [current, setCurrent] = useState(0);
@@ -55,7 +59,7 @@ const Herosection = () => {
               Admissions Open 2026-27
             </motion.span>
 
-            {/* Heading */}
+            {/* Heading */} <br /> <br /> <br />
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -69,7 +73,7 @@ const Herosection = () => {
             </motion.h1>
 
             {/* Description */}
-            <motion.p
+            {/* <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3 }}
@@ -77,7 +81,7 @@ const Herosection = () => {
             >
               भविष्य की चुनौतियों के लिए तैयार करने वाला प्रगतिशील शिक्षण वातावरण,
               जहाँ शिक्षा के साथ-साथ चरित्र, नेतृत्व और आत्मविश्वास का विकास किया जाता है।
-            </motion.p>
+            </motion.p> */}
 
             {/* Buttons */}
             <motion.div
